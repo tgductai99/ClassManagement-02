@@ -1,6 +1,6 @@
 using Abp.Application.Services.Dto;
 
-namespace TaskQLLH.ClassRooms.Dto
+namespace TaskQLLH.Classrooms.Dto
 {
     public class PagedClassroomResultRequestDto : PagedResultRequestDto
     {

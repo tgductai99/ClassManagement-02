@@ -1,21 +1,21 @@
 using System.ComponentModel.DataAnnotations;
 using Abp.AutoMapper;
-using TaskQLLH.ClassRooms;
+using TaskQLLH.Classrooms;
 
-namespace TaskQLLH.ClassRooms.Dto
+namespace TaskQLLH.Classrooms.Dto
 {
-    [AutoMapTo(typeof(ClassRoom))]
+    [AutoMapTo(typeof(Classroom))]
     public class CreateClassroomDto
     {
         [Required]
-        [StringLength(ClassRoom.MaxClassNameLength)]
+        [StringLength(Classroom.MaxClassNameLength)]
         public string ClassName {get;set;}
         
         [Required]
-        [StringLength(ClassRoom.MaxAcademicYearLength)]
+        [StringLength(Classroom.MaxAcademicYearLength)]
         public string AcademicYear { get; set; }
 
-        [StringLength(ClassRoom.MaxDescriptionLength)]
+        [StringLength(Classroom.MaxDescriptionLength)]
         public string Description { get; set; }
 
         public bool IsActive { get; set; } = true;

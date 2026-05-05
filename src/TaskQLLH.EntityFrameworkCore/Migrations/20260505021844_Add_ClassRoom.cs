@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TaskQLLH.Migrations
 {
     /// <inheritdoc />
-    public partial class Add_ClassRoom : Migration
+    public partial class Add_Classroom : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ClassRooms",
+                name: "Classrooms",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -31,12 +31,12 @@ namespace TaskQLLH.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ClassRooms", x => x.Id);
+                    table.PrimaryKey("PK_Classrooms", x => x.Id);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ClassRooms_ClassName_AcademicYear",
-                table: "ClassRooms",
+                name: "IX_Classrooms_ClassName_AcademicYear",
+                table: "Classrooms",
                 columns: new[] { "ClassName", "AcademicYear" },
                 unique: true);
         }
@@ -45,7 +45,7 @@ namespace TaskQLLH.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ClassRooms");
+                name: "Classrooms");
         }
     }
 }

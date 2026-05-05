@@ -1,9 +1,9 @@
 using Abp.Domain.Entities.Auditing;
 using System.ComponentModel.DataAnnotations;
 
-namespace TaskQLLH.ClassRooms
+namespace TaskQLLH.Classrooms
 {
-    public class ClassRoom : FullAuditedEntity<int>
+    public class Classroom : FullAuditedEntity<int>
     {
         public const int MaxClassNameLength = 50;
         public const int MaxAcademicYearLength = 20;
@@ -22,7 +22,7 @@ namespace TaskQLLH.ClassRooms
         
         public bool IsActive { get; set; }
 
-        public ClassRoom()
+        public Classroom()
         {
             IsActive = true;
         }

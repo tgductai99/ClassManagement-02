@@ -12,8 +12,8 @@ using TaskQLLH.EntityFrameworkCore;
 namespace TaskQLLH.Migrations
 {
     [DbContext(typeof(TaskQLLHDbContext))]
-    [Migration("20260505021844_Add_ClassRoom")]
-    partial class Add_ClassRoom
+    [Migration("20260505021844_Add_Classroom")]
+    partial class Add_Classroom
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1586,7 +1586,7 @@ namespace TaskQLLH.Migrations
                     b.ToTable("AbpUsers");
                 });
 
-            modelBuilder.Entity("TaskQLLH.ClassRooms.ClassRoom", b =>
+            modelBuilder.Entity("TaskQLLH.Classrooms.Classroom", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1637,7 +1637,7 @@ namespace TaskQLLH.Migrations
                     b.HasIndex("ClassName", "AcademicYear")
                         .IsUnique();
 
-                    b.ToTable("ClassRooms", (string)null);
+                    b.ToTable("Classrooms", (string)null);
                 });
 
             modelBuilder.Entity("TaskQLLH.MultiTenancy.Tenant", b =>
